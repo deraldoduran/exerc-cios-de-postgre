@@ -70,3 +70,13 @@ VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',350
  -- para exibir todos os dados da tabela
  
  SELECT * FROM empregado
+ 
+ -- criação de nova tabela que vai guardar dados de outras
+ 
+ CREATE TABLE IF NOT EXISTS dept_inf(
+	codigo SERIAL NOT NULL,
+	nome VARCHAR (60),
+	somaSalario Real,
+	CONSTRAINT dept_inf_pkey PRIMARY KEY (codigo)
+
+);

@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS empregado(
 );
 
 
-## -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
+ -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
 
 CREATE sequencial
 --incrementa de 1 em 1 poderia ser 2 em 2 ou 5 em 5
@@ -50,7 +50,7 @@ START 1111
 --guarda no cache o ultimo valor
 CACHE 1;
 
-## para usar a sequencia
+-- para usar a sequencia
 
 CREATE TABLE IF NOT EXISTS tabela (
 -- a variavel codigo vai receber o valor da sequencia

@@ -39,8 +39,13 @@ CREATE TABLE IF NOT EXISTS empregado(
 ## -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
 
 CREATE sequencial
+--incrementa de 1 em 1 poderia ser 2 em 2 ou 5 em 5
 INCREMENT 1
+--limite minimo
 MINVALUE 1111
+--limite maximo
 MAXVALUE 1500
+-- começa no limite minimo, mas poderia ser depois por exemplo 1150
 START 1111
+--guarda no cache o ultimo valor
 CACHE 1;

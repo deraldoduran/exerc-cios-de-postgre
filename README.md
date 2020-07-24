@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS empregado(
 );
 
 
- -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
+# -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
 
 CREATE sequencial
 --incrementa de 1 em 1 poderia ser 2 em 2 ou 5 em 5
@@ -50,7 +50,7 @@ START 1111
 --guarda no cache o ultimo valor
 CACHE 1;
 
--- para usar a sequencia
+#-- para usar a sequencia
 
 CREATE TABLE IF NOT EXISTS tabela (
 -- a variavel codigo vai receber o valor da sequencia
@@ -61,17 +61,17 @@ CONSTRAINT tabela_pkey PRIMARY KEY (codigo)
 
 );
 
--- para inserir dados na tabela empregado
+#-- para inserir dados na tabela empregado
 
 INSERT INTO empregado (nome, salario, numero_dpto)
 VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',3500000,2)
 ,('ACM Neto', 100000, 4);
  
- -- para exibir todos os dados da tabela
+ #-- para exibir todos os dados da tabela
  
  SELECT * FROM empregado
  
- -- criação de nova tabela que vai guardar dados de outras
+# -- criação de nova tabela que vai guardar dados de outras
  
  CREATE TABLE IF NOT EXISTS dept_inf(
 	codigo SERIAL NOT NULL,
@@ -80,3 +80,14 @@ VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',350
 	CONSTRAINT dept_inf_pkey PRIMARY KEY (codigo)
 
 );
+
+#-- inserindo dados de outras tabelas naquela recem criada
+
+-- vai inserir na tabela dept_inf
+INSERT INTO dept_inf (nome,num_dept, somaSalario)
+
+-- dados da tabela departamento.nome  somando os salarios
+SELECT D.nome, COUNT(*), SUM(salario) FROM empregado E,
+departamento D WHERE D.num_dept = E.num_dept GROUP BY D.nome
+-- quando tiver mais de 2 registros
+HAVING COUNT >2

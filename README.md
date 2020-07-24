@@ -1,5 +1,5 @@
-# exerc-cios-de-postgre
-criando tabelas por meio de script
+## exercicios-de-postgre
+#criando tabelas por meio de script
 
 CREATE TABLE IF NOT EXISTS departamento (
 
@@ -34,3 +34,13 @@ CREATE TABLE IF NOT EXISTS empregado(
 	CONSTRAINT empregado_check CHECK (salario>1044.99)
 
 );
+
+
+## -- SE QUISER FAZER UMA SEQUENCIA COM LIMITES
+
+CREATE sequencial
+INCREMENT 1
+MINVALUE 1111
+MAXVALUE 1500
+START 1111
+CACHE 1;

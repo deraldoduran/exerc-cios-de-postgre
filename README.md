@@ -49,3 +49,14 @@ MAXVALUE 1500
 START 1111
 --guarda no cache o ultimo valor
 CACHE 1;
+
+## para usar a sequencia
+
+CREATE TABLE IF NOT EXISTS tabela (
+-- a variavel codigo vai receber o valor da sequencia
+codigo INT DEFAULT NEXTVAL('sequencial'),
+nome VARCHAR(20),
+-- a variavel codigo sera a chave primaria da tabela
+CONSTRAINT tabela_pkey PRIMARY KEY (codigo)
+
+);

@@ -61,17 +61,17 @@ CONSTRAINT tabela_pkey PRIMARY KEY (codigo)
 
 );
 
-#-- para inserir dados na tabela empregado
+##-- para inserir dados na tabela empregado
 
 INSERT INTO empregado (nome, salario, numero_dpto)
 VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',3500000,2)
 ,('ACM Neto', 100000, 4);
  
- #-- para exibir todos os dados da tabela
+ ##-- para exibir todos os dados da tabela
  
  SELECT * FROM empregado
  
-# -- criação de nova tabela que vai guardar dados de outras
+## -- criação de nova tabela que vai guardar dados de outras
  
  CREATE TABLE IF NOT EXISTS dept_inf(
 	codigo SERIAL NOT NULL,

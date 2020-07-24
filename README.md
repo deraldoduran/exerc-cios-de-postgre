@@ -66,3 +66,7 @@ CONSTRAINT tabela_pkey PRIMARY KEY (codigo)
 INSERT INTO empregado (nome, salario, numero_dpto)
 VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',3500000,2)
 ,('ACM Neto', 100000, 4);
+ 
+ -- para exibir todos os dados da tabela
+ 
+ SELECT * FROM empregado

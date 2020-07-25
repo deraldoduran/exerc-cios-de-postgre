@@ -97,4 +97,9 @@ HAVING COUNT(*) >2
 --quando quiser fazer alguma atualização na tabela
 
 -- vai atualizar o salario na tabela empregado da tupla matricula= 1
+
 UPDATE empregado SET salario=salario*1.2 WHERE matricula=1
+
+-- ordena a tabela
+
+SELECT * FROM empregado ORDER BY matricula

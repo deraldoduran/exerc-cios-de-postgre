@@ -103,3 +103,13 @@ UPDATE empregado SET salario=salario*1.2 WHERE matricula=1
 -- ordena a tabela
 
 SELECT * FROM empregado ORDER BY matricula
+
+-- condição para apagar dados de uma tabela
+
+DELETE FROM empregados WHERE salario > 5000
+
+-- SELECIONA TUPLAS COM CONDIÇÃO
+
+SELECT nome, salario FROM empregado 
+WHERE NUMERO_DPTO = 2 ORDER BY matricula
+

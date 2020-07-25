@@ -113,3 +113,8 @@ DELETE FROM empregados WHERE salario > 5000
 SELECT nome, salario FROM empregado 
 WHERE NUMERO_DPTO = 2 ORDER BY matricula
 
+SELECT nome, salario FROM empregado 
+WHERE NUMERO_DPTO = 2 AND SALARIO >=3000 ORDER BY matricula
+
+
+

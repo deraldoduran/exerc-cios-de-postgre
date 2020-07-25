@@ -86,8 +86,15 @@ VALUES ('Ricarda Joana', 1800, 2), ('Mane Cabral', 5000000, 1), ('Bolsonaro',350
 -- vai inserir na tabela dept_inf
 INSERT INTO dept_inf (nome,num_dept, somaSalario)
 
-###-- dados da tabela departamento.nome  somando os salarios
+##-- dados da tabela departamento.nome  somando os salarios
+
 SELECT D.nome, COUNT(*), SUM(salario) FROM empregado E,
 departamento D WHERE D.num_dept = E.num_dept GROUP BY D.nome
 ##-- quando tiver mais de 2 registros
+
 HAVING COUNT(*) >2
+
+--quando quiser fazer alguma atualização na tabela
+
+-- vai atualizar o salario na tabela empregado da tupla matricula= 1
+UPDATE empregado SET salario=salario*1.2 WHERE matricula=1

@@ -127,3 +127,14 @@ FROM EMPREGADO E, DEPARTAMENTO D
 --minhas condições
 WHERE D.NUM_DEPTO = E.NUMERO_DPTO
 
+-- minha busca 
+SELECT E.matricula,E.nome,E.salario, D.nome
+
+--quais tabelas?
+FROM EMPREGADO E, DEPARTAMENTO D
+
+--minhas condições
+WHERE D.NUM_DEPTO = E.NUMERO_DPTO
+
+--ordenação
+ORDER BY E.salario, D.nome;

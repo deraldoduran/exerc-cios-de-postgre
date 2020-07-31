@@ -117,4 +117,13 @@ SELECT nome, salario FROM empregado
 WHERE NUMERO_DPTO = 2 AND SALARIO >=3000 ORDER BY matricula
 
 
+##USO SIMPLES DE JOIN
+-- minha busca 
+SELECT E.nome, D.nome
+
+--quais tabelas?
+FROM EMPREGADO E, DEPARTAMENTO D
+
+--minhas condições
+WHERE D.NUM_DEPTO = E.NUMERO_DPTO
 
